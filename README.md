@@ -1,2 +1,16 @@
-# EX2
-Calculate the Parameters of thee phase single Transmission  in Symmatric and Unsymmtric Transmission
+ clc;
+clear all;
+d=input('enter the diameter in cm:');
+r=d/2;
+rad=r*10^(-2);
+L1=input('Enter the distance btw A and B phase conductor in metre:');
+L2=input('Enter the distance btw B and C  phase conductor in metre:');
+L3=input('Enter the distance btw A and C phase conductor in metre:');
+r1=r*0.7788;
+gmd=(L1*L2*L3)^1/3;
+L=2*10^-7*log(gmd/r1);
+Ind=L*10^6;
+Cap=(2*pi*8.854*10^(-12))/(log(gmd/r1));
+C=Cap*10^6;
+fprintf('\nValue of Inductance =%f mh/ph/km\n',Ind);
+fprintf('\nValue of capacitance=%f microF?ph/km\n',C);
