@@ -1,4 +1,4 @@
- clc;
+clc;
 clear all;
 d=input('enter the diameter in cm:');
 r=d/2;
